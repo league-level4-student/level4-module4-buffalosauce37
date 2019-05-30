@@ -31,9 +31,12 @@ public class EncapsulateTheData {
 		return this.itemsReceived;
 	}
 
-	void setItemsReceived() {
-		if (itemsReceived >= 0) {
-			this.itemsReceived = itemsReceived;
+	void setItemsReceived(int x) {
+		if (x >= 0) {
+			this.itemsReceived = x;
+		}
+		else {
+			itemsReceived = 0;
 		}
 	}
 
