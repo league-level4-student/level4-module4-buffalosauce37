@@ -16,8 +16,8 @@ public class CirclePolymorph extends Polymorph{
 	}
 	public void update() {
 		
-		setX(int)(getX()+Math.cos(circleCounter)*100.0));
-		setY(int)(getY()+Math.sin(circleCounter)*100.0));
+		setX((int)(getX()+Math.cos(circleCounter)*100.0));
+		setY((int)(getY()+Math.sin(circleCounter)*100.0));
 		circleCounter++;
 	}
 	

@@ -30,7 +30,7 @@ public abstract class Polymorph {
 		return this.x;
 	}
 
-	void setX() {
+	void setX(int x) {
 		this.x = x;
 	}
 
@@ -38,7 +38,7 @@ public abstract class Polymorph {
 		return this.y;
 	}
 
-	void setY() {
+	void setY(int y) {
 		this.y = y;
 	}
 

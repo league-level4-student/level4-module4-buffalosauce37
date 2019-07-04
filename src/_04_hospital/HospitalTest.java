@@ -32,6 +32,7 @@ public class HospitalTest extends TestCase {
 		testHospital.addPatient(new Patient());
 		assertEquals(3, testHospital.getPatients().size());
 	}
+	
 
 	/* Fix asserts one at a time */
 	public void testDoctorsHaveSpecialties() throws Exception {
@@ -50,11 +51,11 @@ public class HospitalTest extends TestCase {
 	/* A doctor has a list of patients */
 	public void testAssignDoctor() throws Exception {
 		Doctor testDoctor = new GeneralPractitioner();
-		testDoctor.assignPatient(new Patient());
+		testDoctor.addPatient(new Patient());
 		assertEquals(1, testDoctor.getPatients().size());
-		testDoctor.assignPatient(new Patient());
+		testDoctor.addPatient(new Patient());
 		assertEquals(2, testDoctor.getPatients().size());
-		testDoctor.assignPatient(new Patient());
+		testDoctor.addPatient(new Patient());
 		assertEquals(3, testDoctor.getPatients().size());
 	}
 
@@ -71,8 +72,8 @@ public class HospitalTest extends TestCase {
 		Doctor testDoctor = new GeneralPractitioner();
 		Patient max = new Patient();
 		Patient macky = new Patient();
-		testDoctor.assignPatient(max);
-		testDoctor.assignPatient(macky);
+		testDoctor.addPatient(max);
+		testDoctor.addPatient(macky);
 		assertEquals(false, max.feelsCaredFor());
 		assertEquals(false, macky.feelsCaredFor());
 		testDoctor.doMedicine();
@@ -83,11 +84,11 @@ public class HospitalTest extends TestCase {
 	/* test calling assignPatient when doctor is full throws exception */
 	public void testDoctorsCanOnlyHandle3Patients() throws Exception {
 		Doctor testDoctor = new Doctor();
-		testDoctor.assignPatient(new Patient());
-		testDoctor.assignPatient(new Patient());
-		testDoctor.assignPatient(new Patient());
+		testDoctor.addPatient(new Patient());
+		testDoctor.addPatient(new Patient());
+		testDoctor.addPatient(new Patient());
 		try {
-			testDoctor.assignPatient(new Patient());
+			testDoctor.addPatient(new Patient());
 			assertTrue(false);
 		} catch (DoctorFullException dfe) {
 			assertTrue(true);
