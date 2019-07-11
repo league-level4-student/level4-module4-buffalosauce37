@@ -3,7 +3,7 @@ package _04_hospital;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Doctor {
+public class Doctor {
 	ArrayList<Patient> patient= new ArrayList<>();
 	void addPatient(Patient p) {
 		if(patient.size()<3) {
@@ -13,5 +13,8 @@ public abstract class Doctor {
 	public List<Patient> getPatients() {
 	
 		return this.patient;
+	}
+	public Object size() {
+		return this.size();
 	}
 }
