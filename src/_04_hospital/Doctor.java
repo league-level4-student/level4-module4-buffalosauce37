@@ -17,4 +17,11 @@ public class Doctor {
 	public Object size() {
 		return this.size();
 	}
+	public Object performsSurgery() {
+		return false;
+	}
+	public Object makesHouseCalls() {
+		// TODO Auto-generated method stub
+		return false;
+	}
 }
