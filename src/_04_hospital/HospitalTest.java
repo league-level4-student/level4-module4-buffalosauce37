@@ -85,7 +85,7 @@ public class HospitalTest extends TestCase{
 	public void testDoctorsCanOnlyHandle3Patients() throws Exception {
 		Doctor testDoctor = new Doctor();
 		testDoctor.addPatient(new Patient());
-		testDoctor.addPatient(new Patient());
+		testDoctor.addPatient(new Pastient());
 		testDoctor.addPatient(new Patient());
 		try {
 			testDoctor.addPatient(new Patient());

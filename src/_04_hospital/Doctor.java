@@ -1,4 +1,4 @@
-package _04_hospital;
+package _04_hospital;s
 
 import java.util.ArrayList;
 import java.util.List;
