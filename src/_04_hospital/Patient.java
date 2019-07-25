@@ -1,20 +1,14 @@
 package _04_hospital;
 
 public class Patient {
-
-	public Object size() {
-		// TODO Auto-generated method stub
-		return this.size();
-	}
+	boolean caredFor = false;
 
 	public Object feelsCaredFor() {
-		// TODO Auto-generated method stub
-		return null;
+		return this.caredFor;
 	}
 
 	public void checkPulse() {
-		// TODO Auto-generated method stub
-		
+		caredFor = true;
 	}
 
 }
